@@ -2,33 +2,33 @@ from histogram import invert_hist
 from clean_text import clean
 import random
 
-def gen_sentence(source):
-    # text = clean(source)
+# def gen_sentence(source):
+#     # text = clean(source)
 
-    word_count = 7
-    counter = 1
-    sentence = []
-    while counter <= word_count:
-        if counter == 1: # upper case the first character 
-            word1 = (stochastic_sample(source))
-            word = word1.capitalize()
-            sentence.append(word)
-            counter += 1
-            # print(word1)
-        # elif word_count > counter > 0 : # lowercase the rest? 
-        else: 
-            word2 = stochastic_sample(source)
-            sentence.append(word2.lower())
-            counter += 1
+#     word_count = 7
+#     counter = 1
+#     sentence = []
+#     while counter <= word_count:
+#         if counter == 1: # upper case the first character 
+#             word1 = (stochastic_sample(source))
+#             word = word1.capitalize()
+#             sentence.append(word)
+#             counter += 1
+#             # print(word1)
+#         # elif word_count > counter > 0 : # lowercase the rest? 
+#         else: 
+#             word2 = stochastic_sample(source)
+#             sentence.append(word2.lower())
+#             counter += 1
 
-         # add a period to the last word
-    period = "."
-    # counter += 1
-    # print(sentence)
-    sentence = " ".join(sentence)
-    sentence += period
-    print(sentence)
-    return sentence
+#          # add a period to the last word
+#     period = "."
+#     # counter += 1
+#     # print(sentence)
+#     sentence = " ".join(sentence)
+#     sentence += period
+#     print(sentence)
+#     return sentence
 
 def stochastic_sample(source):
     ''' Histogram -> percentages -> random item'''
@@ -77,4 +77,3 @@ def stochastic_sample(source):
 
 if __name__ == '__main__':
     stochastic_sample("source_text.txt")
-    gen_sentence("source_text.txt")

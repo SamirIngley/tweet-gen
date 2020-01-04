@@ -1,10 +1,9 @@
 from flask import Flask
-import random
-import sample
+import sentence
 
 app = Flask(__name__)
 
 @app.route('/')
 def sentences():
-    sentence = sample.gen_sentence("source_text.txt")
-    return sentence
+    phrase = sentence.gen_sentence("source_text.txt")
+    return phrase

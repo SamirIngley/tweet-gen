@@ -1,6 +1,6 @@
 
 def clean(source):
-    
+    ''' Returns individual strings without certain punctuation . Can return sentences. '''
     clean = []
     # opens and closes file properly
     with open(source) as file: 
