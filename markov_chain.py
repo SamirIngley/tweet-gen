@@ -50,6 +50,7 @@ def random_walk(num_words, markov):
             counter += 1
 
         else:
+            # print(place.items())
             for item in place.items():
                 if item[0] == last_word:
                     # print("item1s: {}".format(list(item[1])))
@@ -58,6 +59,8 @@ def random_walk(num_words, markov):
                     rand_sentence.append(last_word) 
                     counter += 1
                     break
+                else:
+                    pass
     
 
     period = "."
@@ -100,9 +103,9 @@ def random_walk(num_words, markov):
 
 
 if __name__ == '__main__':
-    corpus = ("The student of India who would at the same time be an historian, discovers to his sorrow that the land of his researches is lamentably poor in historical sources. And if within the realm of historical investigation, a more seductive charm lies for him in the analysis of great personalities than in ascertaining the course of historical development, then verily may he look about in vain for such personalities in the antiquity and middle ages of India.").split(' ')
+    corpus = ("The ride of a lifetime by Robert Iger. The best book I read this year. A good example of a Nice guy coming first. What you do is who you are by Ben Horowitz. This book is going to make it fashionable to use the world “Culture” in boardrooms Who is Michael Ovitz by Michael Ovitz. A window into managing Hollywood talent - Future of managing top technical talent The dog who took me up a mountain by Rick Crandall .").split()
     # corpus2 = (source_text.txt).split()
     markov_instance = Markov(corpus)
     # print(markov_instance.states)
     # print(type(markov_instance.chain))
-    random_walk(10, markov_instance)
+    random_walk(14, markov_instance)
